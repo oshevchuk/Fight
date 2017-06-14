@@ -10,10 +10,10 @@ body {
   background-color: black;
   overflow: hidden;
   cursor: pointer;
-  display: inline-block;
-  width: 20%; }
+  display: inline-block; }
 
 .home {
+  overflow: hidden;
   width: 100%;
   min-width: 1024px;
   height: 100vh;
@@ -51,12 +51,14 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(100, 100, 100, 0.5);
+    background-color: rgba(1, 1, 1, 0.5);
     transition: 0.4s; }
   .home .row:hover {
     min-width: 300px;
     width: 35%;
     transition: 0.4s; }
+    .home .row:hover .layer-3 {
+      width: 25%; }
     .home .row:hover button {
       display: inherit; }
     .home .row:hover .message {
@@ -64,27 +66,41 @@ body {
     .home .row:hover .content:before {
       opacity: 0; }
   .home .layer-1 {
+    width: 22%;
     z-index: 5; }
     .home .layer-1 .content {
       background-image: url("/img/maxresdefaudfdlt.jpg"); }
   .home .layer-2 {
-    transform: matrix(1, 0, 0.06, 1, -24, 0);
-    z-index: 6; }
+    width: 22%;
+    z-index: 6;
+    border-left: 4px solid black;
+    transform: skewX(6deg);
+    transform-origin: 0 110%; }
     .home .layer-2 .content {
       background-image: url("/img/ufc-ea-05.jpg"); }
   .home .layer-4 {
-    transform: matrix(1, 0, -0.06, 1, 24, 0);
-    z-index: 6; }
+    width: 22%;
+    z-index: 6;
+    border-right: 4px solid black;
+    transform: skewX(-6deg);
+    transform-origin: 0 110%; }
     .home .layer-4 .content {
       background-image: url("/img/box1m.jpg"); }
   .home .layer-5 {
+    width: 22%;
     z-index: 5; }
     .home .layer-5 .content {
       background-image: url("/img/40d453u-960.jpg"); }
+  .home .layer-3:hover {
+    width: 25% !important; }
   .home .layer-3 {
+    width: 12%;
     pointer-events: all;
     z-index: 10;
-    transform: perspective(596px) rotateX(-13deg) scale(1.6, 1.2); }
+    transform: perspective(300px) rotateX(-6deg) scale(1.6, 1.2);
+    transform-origin: bottom;
+    border-right: 3px solid black;
+    border-left: 3px solid black; }
     .home .layer-3 .content {
       background-image: url("/img/center.jpg"); }
   .home .button-right {

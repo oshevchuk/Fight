@@ -1,0 +1,212 @@
+body {
+  overflow: hidden;
+  margin: 0;
+  background-color: black;
+  -webkit-font-smoothing: antialiased; }
+
+.home {
+  width: 100%;
+  height: 100vh;
+  min-width: 1000px;
+  overflow: hidden; }
+  .home .layer-1 {
+    left: 0;
+    width: 40%;
+    z-index: 5; }
+    .home .layer-1 .content {
+      background-image: url("/img/maxresdefaudfdlt.jpg"); }
+  .home .layer-1:hover ~ .layer-2 {
+    width: 5%;
+    left: 37%; }
+  .home .layer-2:hover {
+    width: 33%;
+    left: 8%; }
+  .home .layer-2 {
+    width: 22%;
+    left: 19%;
+    z-index: 6; }
+    .home .layer-2 .content {
+      border-left: 1px solid black;
+      transform: skewX(6deg);
+      transform-origin: inherit;
+      background-image: url("/img/ufc-ea-05.jpg"); }
+  .home .layer-4 {
+    right: 22%;
+    width: 22%;
+    z-index: 6; }
+    .home .layer-4 .content {
+      transform: skewX(-6deg);
+      border-right: 1px solid black;
+      transform-origin: inherit;
+      background-image: url("/img/box1m.jpg"); }
+  .home .layer-4:hover {
+    width: 32%;
+    right: 12%;
+    position: absolute; }
+  .home .layer-5 {
+    z-index: 5;
+    right: 0px;
+    width: 50%; }
+    .home .layer-5 .content {
+      background-image: url("/img/40d453u-960.jpg"); }
+  .home .layer-3 {
+    width: 15%;
+    z-index: 10;
+    left: 42%;
+    perspective: 300px; }
+    .home .layer-3 .content {
+      background-image: url("/img/center.jpg");
+      transform: rotateX(-8deg);
+      transform-origin: bottom;
+      border-right: 1px solid black;
+      border-left: 1px solid black; }
+  .home .row {
+    transition: 0.3s;
+    height: 100vh;
+    position: absolute; }
+  .home .row:hover .content:before {
+    opacity: 0.5; }
+  .home .content {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; }
+  .home .content:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 1, 1, 0.5);
+    transition: 0.2s; }
+
+.mask {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  z-index: 100;
+  font-family: 'Open Sans', sans-serif;
+  pointer-events: none;
+  color: white;
+  font-size: 1.8em; }
+  .mask .row {
+    position: absolute;
+    height: 90%;
+    width: 26%;
+    top: 10%;
+    display: flex; }
+    .mask .row div {
+      position: relative;
+      width: 100%;
+      height: 100%; }
+    .mask .row a {
+      position: absolute;
+      bottom: 120px;
+      right: 15%;
+      border: none;
+      background-color: #cc312f;
+      color: white;
+      padding: 10px;
+      padding-left: 30px;
+      padding-right: 30px;
+      border-radius: 4px;
+      text-decoration: none;
+      pointer-events: all; }
+    .mask .row a:hover {
+      background-color: #1c312f; }
+  .mask h1 {
+    color: #f61d31;
+    text-transform: uppercase;
+    margin-bottom: 5px; }
+  .mask .m1 {
+    left: 2%;
+    display: none; }
+  .mask .m2 {
+    left: 10%;
+    display: none; }
+  .mask .m4 {
+    right: 13%;
+    display: none; }
+  .mask .m5 {
+    right: 2%;
+    display: none; }
+  .mask .right {
+    text-align: right; }
+
+.logo {
+  position: absolute;
+  width: 200px;
+  left: calc( 50% - 100px);
+  top: 30px;
+  z-index: 120; }
+  .logo img {
+    width: 200px;
+    margin: auto; }
+
+.romb {
+  position: absolute;
+  z-index: 10;
+  color: white;
+  top: 30%;
+  left: calc(50% - 80px);
+  text-align: center;
+  font-size: 3em;
+  border: 1px solid beige;
+  width: 150px;
+  height: 150px;
+  background-color: #cc312f;
+  position: absolute;
+  transform: rotate(45deg);
+  transform-origin: center; }
+
+.romb:before {
+  z-index: 1;
+  content: '?';
+  font-weight: 700;
+  font-size: 1.5em;
+  top: 25%;
+  left: 39%;
+  position: absolute;
+  transform: rotate(-45deg); }
+
+.social {
+  position: absolute;
+  z-index: 40;
+  right: 2%;
+  bottom: 15px; }
+  .social a {
+    color: white;
+    display: inline-block;
+    font-size: 20px;
+    padding: 2px;
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    transition: 0.4s; }
+  .social a:hover {
+    background-color: darkred;
+    transform: rotate(360deg); }
+
+.bonus {
+  z-index: 20;
+  position: absolute;
+  width: 280px;
+  top: calc( 50% + 30px);
+  left: calc( 50% - 150px);
+  color: white;
+  font-size: 1.5em; }
+  .bonus * {
+    width: 100%;
+    text-align: center; }
+  .bonus input {
+    font-size: 1.1em;
+    color: white;
+    background-color: black;
+    border: 2px solid red;
+    padding: 4px;
+    padding-right: 10px;
+    padding-left: 10px; }
