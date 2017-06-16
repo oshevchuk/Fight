@@ -1,8 +1,7 @@
 body {
   overflow: hidden;
   margin: 0;
-  background-color: black;
-  -webkit-font-smoothing: antialiased; }
+  background-color: black; }
 
 .home {
   width: 100%;
@@ -22,22 +21,20 @@ body {
     width: 33%;
     left: 8%; }
   .home .layer-2 {
-    width: 22%;
+    width: 23%;
     left: 19%;
     z-index: 6; }
     .home .layer-2 .content {
       border-left: 1px solid black;
-      transform: skewX(6deg);
-      transform-origin: inherit;
+      animation: mymove 1s 0.4s 1 normal forwards;
       background-image: url("/img/ufc-ea-05.jpg"); }
   .home .layer-4 {
     right: 22%;
     width: 22%;
     z-index: 6; }
     .home .layer-4 .content {
-      transform: skewX(-6deg);
       border-right: 1px solid black;
-      transform-origin: inherit;
+      animation: mymove-r 1s 0.4s 1 normal forwards;
       background-image: url("/img/box1m.jpg"); }
   .home .layer-4:hover {
     width: 32%;
@@ -50,14 +47,14 @@ body {
     .home .layer-5 .content {
       background-image: url("/img/40d453u-960.jpg"); }
   .home .layer-3 {
-    width: 15%;
+    pointer-events: none;
+    width: 16%;
     z-index: 10;
     left: 42%;
     perspective: 300px; }
     .home .layer-3 .content {
       background-image: url("/img/center.jpg");
-      transform: rotateX(-8deg);
-      transform-origin: bottom;
+      animation: mymove-center 1s 0.4s 1 normal forwards;
       border-right: 1px solid black;
       border-left: 1px solid black; }
   .home .row {
@@ -137,7 +134,7 @@ body {
 .logo {
   position: absolute;
   width: 200px;
-  left: calc( 50% - 100px);
+  left: calc(50% - 100px);
   top: 30px;
   z-index: 120; }
   .logo img {
@@ -159,6 +156,12 @@ body {
   position: absolute;
   transform: rotate(45deg);
   transform-origin: center; }
+
+svg {
+  /*Chrome,Safari*/
+  -webkit-clip-path: polygon(200px 200px, 300px 350px, 400px 200px, 300px 50px);
+  /*Firefox*/
+  clip-path: url("#clipPolygon"); }
 
 .romb:before {
   z-index: 1;
@@ -195,8 +198,8 @@ body {
   z-index: 20;
   position: absolute;
   width: 280px;
-  top: calc( 50% + 30px);
-  left: calc( 50% - 150px);
+  top: calc(50% + 30px);
+  left: calc(50% - 150px);
   color: white;
   font-size: 1.5em; }
   .bonus * {
@@ -210,3 +213,30 @@ body {
     padding: 4px;
     padding-right: 10px;
     padding-left: 10px; }
+
+.test {
+  width: 301px;
+  height: 300px;
+  margin: 28px auto;
+  background: black url(https://ununsplash.imgix.net/photo-1415302199888-384f752645d0?q=75&fm=jpg&s=823bdcc1b7ad955f5180efd352561016);
+  background-size: cover;
+  clip-path: polygon(20% 0%, 0% 0%, 0% 50%, 0% 80%, 0% 100%, 50% 100%, 80% 100%, 100% 100%, 100% 50%, 100% 0%, 80% 0%, 50% 0%);
+  -webkit-clip-path: circle(50% at 50% 50%); }
+
+@keyframes mymove {
+  0% { }
+  100% {
+    transform: skewX(6deg);
+    transform-origin: inherit; } }
+
+@keyframes mymove-r {
+  0% { }
+  100% {
+    transform: skewX(-6deg);
+    transform-origin: inherit; } }
+
+@keyframes mymove-center {
+  0% { }
+  100% {
+    transform: rotateX(-8deg);
+    transform-origin: bottom; } }

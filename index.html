@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/preloader.css">
     <link rel="stylesheet" href="css/v2.css">
 </head>
@@ -21,13 +27,13 @@
     </div>
 </div>
 
-<div id="home" class="home" style="display: none;">
-    <div class="layer-1 row">
-        <div class="content">2
+<div id="home" class="home intro" style="display: none;">
+    <div class="layer-1 row  fadeInDown animated">
+        <div class="content ">
         </div>
     </div>
-    <div class="layer-2 row">
-        <div class="content">2
+    <div class="layer-2 row  fadeInUp animated">
+        <div class="content">
         </div>
     </div>
     <div class="layer-3 row">
@@ -45,11 +51,11 @@
         <!--<image xlink:href="http://i.imgur.com/RECDV24.jpg" x="0" y="0" height="8" width="10" clip-path="url(#clip)"/>-->
         <!--</svg>-->
     </div>
-    <div class="layer-4 row">
+    <div class="layer-4 row  fadeInUp animated">
         <div class="content">
         </div>
     </div>
-    <div class="layer-5 row">
+    <div class="layer-5 row  fadeInDown animated">
         <div class="content">
         </div>
     </div>
@@ -57,7 +63,7 @@
 
 <div class="mask">
     <div class="m1 row">
-        <div>
+        <div class="fadeInLeft animated">
             <h1>Аpмреслінг</h1>
             <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.typesetting industry. </span>
 
@@ -65,7 +71,7 @@
         </div>
     </div>
     <div class="m2 row">
-        <div>
+        <div class="fadeInRight animated">
             <h1>Аpмреслінг</h1>
             <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.typesetting industry. </span>
 
@@ -74,7 +80,7 @@
     </div>
 
     <div class="m4 row right">
-        <div>
+        <div class="fadeInLeft animated">
             <h1>Lorem Ipsum </h1>
             <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.typesetting industry. </span>
 
@@ -82,7 +88,7 @@
         </div>
     </div>
     <div class="m5 row right">
-        <div>
+        <div class="fadeInRight animated">
             <h1>Lorem Ipsum </h1>
             <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.typesetting industry. </span>
 
@@ -91,15 +97,22 @@
     </div>
 </div>
 
-<div class="logo">
+<div class="logo fadeInDown animated">
     <a>
         <img src="img/Logo.png" alt="">
     </a>
 </div>
 
-<div class="romb"></div>
+<div class="romb">
+    <svg width="0" height="0">
+        <clipPath id="clipPolygon">
+            <polygon points="200 200,300 350,400 200,300 50">
+            </polygon>
+        </clipPath>
+    </svg>
+</div>
 
-<div class="bonus">
+<div class="bonus bounceIn animated">
     <div>
         <div>Введите промокод</div>
         <input type="text" value="67321tg1yhu23u">
@@ -116,7 +129,13 @@
     <a><i class="fa fa-vk" aria-hidden="true"></i></a>
 </div>
 
+<!--<div style="position: absolute; top: 10px; z-index: 200;">-->
+    <!--<div class="test"></div>-->
+<!--</div>-->
+
+
 <script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/segment.min.js"></script>
 <script src="js/main.js"></script>
 <script src="js/v2.js"></script>
 
